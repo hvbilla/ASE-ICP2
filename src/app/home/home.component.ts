@@ -38,8 +38,9 @@ export class HomeComponent implements OnInit {
           console.log(resp);          
           this.displayResult=true;
           }
-          responsiveVoice.speak('The Weight of ' + this.recipe.name + ' is ' + this.nutritionData.hits[0].fields.nf_serving_weight_grams);
-          responsiveVoice.speak('The Calories of ' + this.recipe.name + ' is ' + this.nutritionData.hits[0].fields.nf_calories);
+          
+          responsiveVoice.speak('The Calories of ' + this.recipe.name + ' is ' + this.nutritionData.hits[0].fields.nf_calories );
+          responsiveVoice.speak('The Weight of ' + this.recipe.name + ' is ' + this.nutritionData.hits[0].fields.nf_serving_weight_grams + 'grams');
         });
         
   }
