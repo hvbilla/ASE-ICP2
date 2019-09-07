@@ -1,0 +1,26 @@
+<br />
+<br />
+<div>
+    <h1 class="text-center">Nutrition Details</h1>
+    <div class="form-group">
+        <input type="name" name="itemname" class="form-control" [(ngModel)]="recipe.name" id="fooditemname"
+            aria-describedby="nutrition description" placeholder="Enter itemname">
+    </div>
+
+    <button type="button" (click)="getNutrition()" class=" btn btn-info text-center" >Get Nutrition Details</button>
+
+</div>
+
+<div class="text-center"  *ngIf="displayResult" >
+    <h2> Number of calories : {{nutritionData.hits[0].fields.nf_calories}}</h2>
+    <h2>Number of serving grams :{{nutritionData.hits[0].fields.nf_serving_weight_grams}}</h2>
+</div>
+
+
+
+<div class="result2" *ngIf="wrongEntry" >
+        <p>
+           Oops u have entered an invalid item
+        </p>
+       
+    </div>
